@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="dns-prefetch" href="//stackpath.bootstrapcdn.com" />
+	<link rel="dns-prefetch" href="//code.jquery.com/jquery-3.4.1.js">
+	<link href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Anime Finder</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+	<h3 class="text-center text-white mt-3">Find anime source here!</h3>
+	<div class="parent search-wrapper mt-3 shadow-md rounded overflow-hidden">
+		<div class="alert alert-primary mb-0" role="alert">
+  			<span><b>Note : </b>Search results with similarity lower than 90% are probably incorrect result (just similar, not a match). </span>
+		</div>
+			<div class="img-wrapper w-100 border-bottom">
+				<img src="" id="image" class="">
+			</div>
+
+		<label for="file" class="w-100">
+			<div class="text-center text-dark py-2">	
+				<b>Click here to choose file</b>
+				<input type="file" id="file" class="d-none" name="file">
+			</div>
+		</label>
+	</div>
+
+	<div class="parent data-wrapper my-3 rounded" id="parent-top">
+		
+	</div>
+	
+	<footer class="parent p-3 rounded">
+		<div><span class="color-white">Made with JavaScript by</span> <span class="color-pink text-decoration-none">Frastio Agustian</span></div>
+		<div class="color-white">If theres a bug DM me on my insta! <a href="https://instagram.com/frastio10" class="color-pink text-decoration-none">@frastio10</a></div>
+	</footer>
+	<template id="data-top">
+		<div class="p-3">
+			<h5 class="font-weight-normal main-title title">{jpTitle}</h5>
+			<h6 class="font-weight-normal title">{rmTitle}</h6>
+			<h6 class="font-weight-normal title">{enTitle}</h6>
+			<h6 class="font-weight-normal title">{cnTitle}</h6>
+
+			<div class="dropdown-divider my-2"></div>
+
+			<p class="text-danger mb-0">EP#{eps} <span class="text-success">{from}-{to}</span>~{similarity}</p>
+			<p>Airing from {season}</p>
+	
+			<video width="100%" height="auto" controls>
+			  <source src="{pvVideo}" type="video/mp4">
+			  Your browser does not support the video tag.
+			</video>
+			
+		</div>
+	</template>
+</body>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+<script src="assets/js/app.js"></script>
+</html>

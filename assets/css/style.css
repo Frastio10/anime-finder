@@ -1,0 +1,65 @@
+body{
+	background: url("../../bg.png");
+	background-size: cover;
+	background-size: 105%;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.line{
+	clear: both;
+    border-bottom: 1px solid rgb(102, 102, 102);
+
+}
+
+.bg-white{
+	background: #fff;
+}
+
+.parent{
+	background: #fff;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.height-auto{
+	height: unset !important; 
+}
+
+.img-wrapper{
+	height: 300px;
+}
+
+#image{
+	width: 100%;
+}
+
+.search-wrapper{
+
+}
+
+label{
+
+	text-align: center;
+	margin: 0 auto;
+}
+
+.main-title{
+	font-size: 18px !important;
+}
+
+.title{
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+@media screen and (max-width: 360px){
+	body{
+		background: lightblue;
+	}
+
+	.parent{
+		width: 90%;
+	}
+}
