@@ -49,7 +49,7 @@ const fetchData = ()=>{
 		.replace('{similarity}',similarity)
 
 		parentTemplate.innerHTML = temp;
-		$(window).scrollTo(document.querySelector(".data-wrapper"));
+		$(window).scrollTo(document.querySelector(".data-wrapper"),800);
 	});
 }
 

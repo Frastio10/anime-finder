@@ -11,10 +11,13 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
-	<h3 class="text-center text-white mt-3">Find anime source here!</h3>
-	<div class="parent search-wrapper mt-3 shadow-md rounded overflow-hidden">
-		<div class="alert alert-primary mb-0" role="alert">
-  			<span><b>Note : </b>Search results with similarity lower than 90% are probably incorrect result (just similar, not a match). </span>
+	<div class="parent rounded py-2 mt-3">
+		<h3 class="text-center text-dark">Find anime source here!</h3>
+	</div>
+
+	<div class="parent search-wrapper my-3 shadow-md rounded overflow-hidden">
+		<div class="alert alert-success mb-0" role="alert">
+  			<span>The image must be a scene from the anime, not a fanart, or something else, otherwise, it will just show random result</span>
 		</div>
 			<div class="img-wrapper w-100 border-bottom">
 				<img src="" id="image" class="">
@@ -28,15 +31,19 @@
 		</label>
 	</div>
 
-	<div class="parent data-wrapper my-3 rounded" id="parent-top">
+	<div class="parent data-wrapper mb-3 rounded shadow-md" id="parent-top">
 		
 	</div>
 	
-	<footer class="parent p-3 rounded">
-		<div><span class="color-white">Made with JavaScript by</span> <span class="color-pink text-decoration-none">Frastio Agustian</span></div>
-		<div class="color-white">If theres a bug DM me on my insta! <a href="https://instagram.com/frastio10" class="color-pink text-decoration-none">@frastio10</a></div>
+	<footer class="parent p-3 rounded mb-3 shadow-md">
+		<div><span class="color-white">Made with JavaScript by</span> <b>Frastio Agustian</b></div>
+		<div class="color-white">If theres a bug DM me on my insta!, or send me any feedbacks <a href="https://instagram.com/frastio10" class="color-pink text-decoration-none"><b>@frastio10</b></a></div>
 	</footer>
 	<template id="data-top">
+		<div class="alert alert-primary mb-0" role="alert">
+  			<span><b>Note : </b>Search results with similarity lower than 90% are probably incorrect result (just similar, not a match). </span>
+		</div>
+
 		<div class="p-3">
 			<h5 class="font-weight-normal main-title title">{jpTitle}</h5>
 			<h6 class="font-weight-normal title">{rmTitle}</h6>
@@ -48,7 +55,7 @@
 			<p class="text-danger mb-0">EP#{eps} <span class="text-success">{from}-{to}</span>~{similarity}</p>
 			<p>Airing from {season}</p>
 	
-			<video width="100%" height="auto" controls>
+			<video width="100%" height="auto" controls autoplay="true" loop="true">
 			  <source src="{pvVideo}" type="video/mp4">
 			  Your browser does not support the video tag.
 			</video>
